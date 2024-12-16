@@ -1,13 +1,16 @@
-import React from 'react';
 import DailyMessageDisplay from '../components/DailyMessageDisplay';
 import MessageDisplay from '../components/MessageDisplay';
 import ShareButton from '../components/ShareButton';
-import './Home.css';
+import { useState, useEffect } from 'react';
 
 const Home: React.FC = () => {
-    // Sample message and color
-    const message = "Stay positive, work hard, make it happen!";
-    const backgroundColor = "#f0e68c";
+    const [message, setMessage] = useState('Stay positive and work hard!');
+    const [backgroundColor, setBackgroundColor] = useState('#fff');
+
+    useEffect(() => {
+        // This could be dynamic from some API
+        setBackgroundColor('#FFCC00');
+    }, []);
 
     return (
         <div className="home-container">
