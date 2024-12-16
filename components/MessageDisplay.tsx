@@ -8,7 +8,7 @@ interface MessageDisplayProps {
 
 const MessageDisplay: React.FC<MessageDisplayProps> = ({ message, backgroundColor }) => {
   return (
-    <div className='message-display' style={{ backgroundColor }}>
+    <div className="message-display" style={{ backgroundColor }}>
       <h1>{message}</h1>
     </div>
   );
